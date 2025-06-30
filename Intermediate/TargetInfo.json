@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Patronprototype",
+			"Path": "..\\Source\\Patronprototype.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "PatronprototypeEditor",
+			"Path": "..\\Source\\PatronprototypeEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

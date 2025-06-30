@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Patronprototype.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Patronprototype.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\PatronprototypeEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Patronprototype">
+      <UniqueIdentifier>{A71B8CA4-4040-31CC-9579-61183713D919}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Patronprototype\Bloque.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\Bloque.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueAcero.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueAcero.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueCamuflada.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueCamuflada.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueConcreto.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueConcreto.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueElectricidad.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueElectricidad.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueExplosivo.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueExplosivo.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueFuego.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueFuego.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueHielo.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueHielo.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueLadrillo.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueLadrillo.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueMadera.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueMadera.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueToxico.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueToxico.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\BloqueTrampolin.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\BloqueTrampolin.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\Cloneable.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\Cloneable.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\EscudoCaracter.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\EscudoCaracter.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\GestorDePrototipos.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\GestorDePrototipos.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\ObservadorBomba.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\ObservadorBomba.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\Patronprototype\Patronprototype.Build.cs">
+      <Filter>Source\Patronprototype</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Patronprototype\Patronprototype.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\Patronprototype.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\PatronprototypeCharacter.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\PatronprototypeCharacter.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Patronprototype\PatronprototypeGameMode.cpp">
+      <Filter>Source\Patronprototype</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Patronprototype\PatronprototypeGameMode.h">
+      <Filter>Source\Patronprototype</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

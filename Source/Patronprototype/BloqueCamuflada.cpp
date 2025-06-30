@@ -17,22 +17,22 @@ ABloqueCamuflada::ABloqueCamuflada()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
-	// Cargar partícula de explosión
+	
 	static ConstructorHelpers::FObjectFinder<UParticleSystem> FX(TEXT("/Game/StarterContent/Particles/P_Explosion.P_Explosion"));
 	if (FX.Succeeded()) FXExplosion = FX.Object;
 
-	// Cargar sonido
+	
 	static ConstructorHelpers::FObjectFinder<USoundBase> Sonido(TEXT("/Game/StarterContent/Audio/Explosion_-_Sound_Effect.Explosion_-_Sound_Effect"));
 	if (Sonido.Succeeded()) SonidoExplosion = Sonido.Object;
 
-	// Configurar colisión
+	
 	Mesh->SetGenerateOverlapEvents(true);
 	Mesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	Mesh->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
 	Mesh->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
 	Mesh->OnComponentBeginOverlap.AddDynamic(this, &ABloqueCamuflada::AlColisionar);
 
-	// Luz sospechosa (desactivada por defecto si quieres)
+	
 	LuzSospechosa = CreateDefaultSubobject<UPointLightComponent>(TEXT("LuzSospechosa"));
 	LuzSospechosa->SetupAttachment(Mesh);
 	LuzSospechosa->SetIntensity(500.0f);
@@ -40,7 +40,7 @@ ABloqueCamuflada::ABloqueCamuflada()
 	LuzSospechosa->SetAttenuationRadius(200.f);
 	LuzSospechosa->SetVisibility(true);
 
-	// Texto flotante
+	
 	TextoCamuflado = CreateDefaultSubobject<UTextRenderComponent>(TEXT("TextoCamuflado"));
 	TextoCamuflado->SetupAttachment(RootComponent);
 	TextoCamuflado->SetText(FText::FromString("Bloque Camuflado"));

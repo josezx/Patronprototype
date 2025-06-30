@@ -17,17 +17,23 @@ AEscudoCaracter::AEscudoCaracter()
     {
         UE_LOG(LogTemp, Warning, TEXT("No se pudo encontrar la malla en /Game/StarterContent/Shapes/Shape_Sphere"));
     }
-    static ConstructorHelpers::FObjectFinder<UMaterialInterface> MaterialAsset(TEXT("/Script/Engine.Material'/Game/StarterContent/Materials/M_Water_Lake.M_Water_Lake'"));
+    static ConstructorHelpers::FObjectFinder<UMaterialInterface> MaterialAsset(TEXT("/Game/StarterContent/Materials/M_Glass.M_Glass"));
     if (MaterialAsset.Succeeded())
     {
         MeshComponent->SetMaterial(0, MaterialAsset.Object);
     }
     else
     {
-        UE_LOG(LogTemp, Warning, TEXT("No se pudo encontrar el material en /Game/StarterContent/Materials/M_Water_Lake"));
+        UE_LOG(LogTemp, Warning, TEXT("No se pudo encontrar el material en /Game/StarterContent/Materials/M_Glass.M_Glass"));
     }
 
-    MeshComponent->SetWorldScale3D(FVector(5.0f, 5.0f, 5.0f));
+    // 🔧 Escala normal
+    MeshComponent->SetWorldScale3D(FVector(1.0f)); // Tamaño suficientemente grande
+
+    // Este valor está ajustado para que la esfera envuelva correctamente desde los pies a la cabeza
+    MeshComponent->SetRelativeLocation(FVector(-220.0f,-220.0f, -220.0f)); // Baja justo el radio de la cápsula
+    // ✅ Desactivar colisión para que no bloquee al jugador
+    MeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
 void AEscudoCaracter::BeginPlay()

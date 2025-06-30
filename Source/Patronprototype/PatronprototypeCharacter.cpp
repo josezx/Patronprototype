@@ -189,7 +189,7 @@ void APatronprototypeCharacter::RecibirDanio(float Cantidad)
 	{
 		Salud = 0;
 
-		// Mostrar mensaje de END GAME en pantalla, centrado y grande
+	
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("END GAME"), true, FVector2D(5.0f, 5.0f));
 
 		// Desactivar movimiento o control del jugador (opcional)
@@ -211,12 +211,12 @@ void APatronprototypeCharacter::ReiniciarNivel()
 }
 void APatronprototypeCharacter::actualizar(float distanciaEnCeldas)
 {
-	constexpr float RANGO_ARMADURA = 2.0f;
-	constexpr float RANGO_PELIGRO = 3.0f;
-	constexpr float RANGO_ADVERTENCIA = 10.0f;
+	constexpr float RANGO_ARMADURA = 2.0f; // distancia en celdas para activar armadura
+	constexpr float RANGO_PELIGRO = 3.0f; // distancia en celdas para peligro inminente
+	constexpr float RANGO_ADVERTENCIA = 10.0f;// distancia en celdas para advertencia
 
 	float tiempoActual = GetWorld()->GetTimeSeconds();
-
+	//donde dibuje con lineas debug para visualizar los rangos de advertencia y peligro
 	DrawDebugSphere(GetWorld(), GetActorLocation(), RANGO_ADVERTENCIA * 1000.0f, 16, FColor::Yellow, false, 0.1f);
 	DrawDebugSphere(GetWorld(), GetActorLocation(), RANGO_PELIGRO * 1000.0f, 16, FColor::Red, false, 0.1f);
 
@@ -225,7 +225,7 @@ void APatronprototypeCharacter::actualizar(float distanciaEnCeldas)
 		ActivarArmaduraTemporal();
 	}
 
-	// 🔴 Peligro
+	// 🔴 Peligro inminente a menos de 3 bloques
 	if (distanciaEnCeldas <= RANGO_PELIGRO)
 	{
 		if (!bPeligroSonado && tiempoActual - UltimoTiempoPeligro > 3.0f)
@@ -244,7 +244,7 @@ void APatronprototypeCharacter::actualizar(float distanciaEnCeldas)
 		bPeligroSonado = false;
 	}
 
-	// 🟡 Advertencia
+	// 🟡 Advertencia a menos de 10 bloques
 	if (distanciaEnCeldas <= RANGO_ADVERTENCIA)
 	{
 		if (!bAdvertenciaSonada && tiempoActual - UltimoTiempoAdvertencia > 3.0f)

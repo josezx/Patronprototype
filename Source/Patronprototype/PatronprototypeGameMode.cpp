@@ -40,7 +40,8 @@ void APatronprototypeGameMode::BeginPlay()
 	Gestor = GetWorld()->SpawnActor<AGestorDePrototipos>();
 	InicializarPrototype();
 	ClonarBloques(TFilas, TColumnas);
-	// 🔽 Aquí va la suscripción del jugador como observador a los bloques camuflados
+
+	// suscripcion del character  como observador a los bloques camuflados
 	APawn* Jugador = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	if (Jugador)
 	{
@@ -55,7 +56,6 @@ void APatronprototypeGameMode::BeginPlay()
 		}
 	}
 
-	//para posicionar aleatoriamente al jugador luego de generar el laberinto
 	GetWorld()->GetTimerManager().SetTimer(TimerPosicion, this, &APatronprototypeGameMode::PosicionarJugadorAleatoriamente, 0.1f, false);
 }
 
@@ -274,7 +274,7 @@ void APatronprototypeGameMode::ClonarBloques(int InTFilas, int InTColumnas)
 		}
 	}
 
-	// 🔄 Reflejar también celdas vacías (valor 0) para permitir posicionar al jugador
+	// Reflejo de celdas vacías (valor 0) para permitir posicionar al jugador
 	for (int Y = 0; Y < InTFilas; Y++)
 	{
 		for (int X = Mitad; X < InTColumnas; X++)
@@ -283,8 +283,6 @@ void APatronprototypeGameMode::ClonarBloques(int InTFilas, int InTColumnas)
 			{
 				int XReflejado = Mitad - (X - Mitad);
 				MapaLaberinto[Y][XReflejado] = 0;
-
-				// (Opcional) también podrías agregar la posición al vector de patrullaje si lo necesitas:
 				FVector PosClonada = FVector(XReflejado * TamanioCelda, Y * TamanioCelda, 0.f);
 				PuntosPatrullaLibres.Add(PosClonada);
 			}
